@@ -110,6 +110,7 @@
 };
 
 // export default Navbar;
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -122,6 +123,7 @@ const Navbar = () => {
                 <h2>My Blog</h2>
             </div>
             <ul style={styles.navLinks}>
+                {/* Home page link removed */}
                 <li>
                     <Link
                         to="/add-post"
@@ -182,4 +184,3 @@ const styles = {
 };
 
 export default Navbar;
-
