@@ -82,17 +82,46 @@
 
 
 // export default Navbar;
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Navbar from './Navbar';
+// import AddPostPage from './AddPostPage'; // Assuming this is the component for adding posts
+// import ListPostsPage from './ListPostsPage'; // Assuming this is the component for listing posts
+
+// function App() {
+//   return (
+//     <Router>
+//       <Navbar />
+//       <Routes>
+//         <Route path="/add-post" element={<AddPostPage />} />
+//         <Route path="/list-posts" element={<ListPostsPage />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// const HomePage = () => {
+//   return (
+//     <div>
+//       <h1>Welcome to My Blog!</h1>
+//       <p>Explore the blog, add new posts, and read the latest ones.</p>
+//     </div>
+  );
+};
+
+// export default Navbar;
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import AddPostPage from './AddPostPage'; // Assuming this is the component for adding posts
-import ListPostsPage from './ListPostsPage'; // Assuming this is the component for listing posts
+import AddPostPage from './AddPostPage';
+import ListPostsPage from './ListPostsPage';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Navigate to="/list-posts" />} /> {/* Redirect homepage to list-posts */}
         <Route path="/add-post" element={<AddPostPage />} />
         <Route path="/list-posts" element={<ListPostsPage />} />
       </Routes>
@@ -100,14 +129,6 @@ function App() {
   );
 }
 
-const HomePage = () => {
-  return (
-    <div>
-      <h1>Welcome to My Blog!</h1>
-      <p>Explore the blog, add new posts, and read the latest ones.</p>
-    </div>
-  );
-};
 
 export default Navbar;
 
