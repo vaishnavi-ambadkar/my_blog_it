@@ -93,7 +93,6 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} /> {/* Render HomePage component */}
         <Route path="/add-post" element={<AddPostPage />} />
         <Route path="/list-posts" element={<ListPostsPage />} />
       </Routes>
